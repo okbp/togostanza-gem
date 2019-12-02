@@ -156,6 +156,7 @@ module TogoStanza::Stanza
   autoload :Querying,      'togostanza/stanza/querying'
 
   class Context < Hashie::Mash
+    disable_warnings
     def respond_to_missing?(*)
       # XXX It looks ugly, but we need use not pre-defined properties
       true
